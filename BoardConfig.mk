@@ -38,11 +38,13 @@ BOARD_HAVE_HTC_AUDIO := true
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := doubleshot
+BOARD_WANTS_EMMC_BOOT := true
 
 # Kernel [Settings]
 BOARD_KERNEL_BASE := 0x48000000
+BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := no_console_suspend=1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := nconsole=ttyHSL0 androidboot.hardware=doubleshot no_console_suspend=1 androidboot.selinux=permissive
 
 # Kernel [Build]
 TARGET_KERNEL_CONFIG := doubleshot_defconfig

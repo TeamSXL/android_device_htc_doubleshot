@@ -44,7 +44,7 @@ BOARD_WANTS_EMMC_BOOT := true
 BOARD_KERNEL_BASE := 0x48000000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01400000
 BOARD_KERNEL_PAGE_SIZE := 2048
-BOARD_KERNEL_CMDLINE := nconsole=ttyHSL0 androidboot.hardware=doubleshot no_console_suspend=1 androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := console=ttyHSL0 androidboot.hardware=doubleshot no_console_suspend=1 androidboot.selinux=permissive
 
 # Kernel [Build]
 TARGET_KERNEL_CONFIG := doubleshot_defconfig
